@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">        
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+   
+
+
+
+
+<style type="text/css">
+	@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,600&family=Rubik:wght@700&display=swap');
+	*{
+		box-sizing: border-box;
+	}
+	body{
+		background-color: #e9ffdb;
+	}
+	.navbar-brand {
+		font-weight: 500;
+		font-family:'Rubik',sans-sarif;
+		font-size: 30px; 
+
+	}
+	.subcont{
+		align-items: center;
+		font-family: 'Barlow',sans-sarif;
+		font-size: 50px;
+		
+
+	}
+	.subcont p{
+		margin-right: 40px;
+		/*margin-top:200px;*/
+		margin-bottom: 20px;
+		color: white;
+	filter: drop-shadow(0 0 0.75rem black);
+
+	}
+	.subcont p:hover{
+		font-size: 60px;
+		transition: 0.4s ease 0s;
+		cursor: pointer;
+	}
+	#total p{
+		color: rgb(255, 94, 26);
+	}
+	#active p{
+		color:rgb(68, 158, 253);
+	}
+	#recover p{
+		color:rgb(9, 206, 104);
+	}
+	#death p{
+		color:rgb(255, 0, 0);
+	}
+	.container{
+	
+		display: flex;
+		justify-content: center;
+		
+		/*border: 5px solid black;*/
+		/*height: auto;*/
+		margin-top:8em;
+		/*border-top-right-radius: 50px;
+		border-top-left-radius: 50px;*/
+		width: 100%;
+
+	}
+	h2{
+		margin-left:18px; 
+		color: white;
+		font-weight: 3;
+		filter: drop-shadow(0 0 0.75rem black);
+
+	}
+	/*.container:hover{
+		border: 9px solid #373b35;
+		height: 220px;
+		width:1200px;
+		transition: 0.4s ease 0s;
+		background-color: #d6fcff;
+	
+	}*/
+	#intro{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+	}
+	#intro p{
+		font-size: 4em;
+		color: #363534;
+	}
+	body{
+		background-color: #4a4e54;
+	}
+	h1{
+		font-weight: ;
+		font-size: 3em;
+		margin-left: 2vh; 
+	}
+	hr{
+		background-color: #232626;
+		height: 2vh;
+
+
+	}
+</style>
+    <title>Corona Tracker</title>
+  </head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand text-danger" href="#">CoronaTracker</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<h1 class="text-danger">Track Live Corona Cases</h1>
+<hr>
+
+
+<div class="container">
+		<div id="total" class="subcont">
+			<p>{{ total }}</p>
+			<h2>Total</h2>
+		</div>
+		<div id="active"class="subcont">
+			<p>{{ active }}</p>
+			<h2>Active</h2>
+		</div>
+		<div id="recover"class="subcont">
+			<p>{{ recovered }}</p>
+			<h2>Recovered</h2>
+		</div>
+		<div id="death"class="subcont">
+			<p>{{ deaths }}</p>
+			<h2>Deaths</h2>
+		</div>
+</div>
+
+
+
+
+</body>
+</html>
